@@ -23,7 +23,7 @@ class PageviewCalculator
   private
 
   def page_views
-    @page_views ||= File.readlines(log_file_path).map { |l| l.split(' ') }
+    @page_views ||= File.readlines(log_file_path).map(&:split)
   end
 
   def sort_histogram(hist)
