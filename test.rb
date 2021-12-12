@@ -4,7 +4,7 @@
 $LOAD_PATH << './lib'
 require 'pageview_calculator'
 
-calculator = PageviewCalculator.new('production.log')
+calculator = PageviewCalculator.new(ARGV[0])
 
 p 'A list of web pages with the most page views:'
 calculator.list_most_viewed.each { |p| puts p }
